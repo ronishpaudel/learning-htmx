@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTMX TESTING</title>
+  </head>
+  <body class="flex justify-center items-center flex-col">
+    <div
+      class="flex justify-center mt-20 items-center flex-col bg-gray-900 w-[500px] rounded-lg"
+    >
+      <div class="flex-col">
+        <input
+          placeholder="Start Searching..."
+          class="text-white py-2 px-3 mt-10 w-[500px] outline-0 bg-gray-800"
+        />
+        <div class="flex justify-evenly gap-40 mt-5 underline">
+          <p class="text-white">Name</p>
+          <p class="text-white">Phone Number</p>
+        </div>
+      </div>
+
+      <div
+        hx-get="/get/user-data"
+        hx-trigger="click"
+        hx-push-url="true"
+        class="bg-blue-500 text-white py-2 px-3 mt-10 rounded-lg"
+      >
+        Go To Page 1
+      </div>
+
+      <span class="htmx-indicator" id="loading">
+        <img src="img/loader.gif" alt="Loading..." class="m-auto h-10" />
+      </span>
+    </div>
+  </body>
+</html>
