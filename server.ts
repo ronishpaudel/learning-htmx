@@ -22,6 +22,7 @@ app.get("/get/user-data", function (req, res) {
     })
   );
 });
+
 //GetRoute for userData
 app.get("/users", (req, res) => {
   setInterval(() => {
