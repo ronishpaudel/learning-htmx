@@ -71,7 +71,6 @@ app.post("/search", (req, res) => {
     `
       )
       .join("");
-
     res.send(searchResultHtml);
   }, 1000);
 });
