@@ -19,7 +19,7 @@ app.get("/get/user-data", function (req, res) {
     NewComponent({
       children: "<h1>hamro tempasdadslating</h1>",
       age: "aage 12",
-      name: "swikar",
+      name: "Ronish",
       height: "6ft",
     })
   );
