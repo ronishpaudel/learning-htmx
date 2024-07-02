@@ -61,7 +61,6 @@ app.post("/search", (req, res) => {
 
     return name.includes(searchTerm) || email.includes(searchTerm);
   });
-
   setTimeout(() => {
     const searchResultHtml = searchResults
       .map(
