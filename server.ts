@@ -1,5 +1,6 @@
 import express from "express";
-import { Layout, NewComponent } from "./userData";
+import { NewComponent } from "./userData";
+import { contacts } from "./utils/data";
 
 const app = express();
 const Port = 3000;
@@ -37,16 +38,6 @@ app.get("/users", (req, res) => {
   <ul>${users.map((user) => `<li>Name : ${user.name}</li>`).join(" ")}</ul>`);
   }, 1000);
 });
-
-//POST req for search
-const contacts = [
-  { name: "Swikar Sharma", email: "swikarsharma@gmail.com" },
-  { name: "Sandip Pokhrel", email: "sandip.m@example.com" },
-  { name: "Ronish Paudel", email: "paudelronish@gmail.com" },
-  { name: "Sunil Acharya", email: "sunil.a@example.com" },
-  { name: "Anita Lama", email: "anita.lama@gmail.com" },
-  { name: "Rajesh KC", email: "rajkc@example.com" },
-];
 
 app.post("/search", (req, res) => {
   const searchTerm = req.body.search.toLowerCase();
