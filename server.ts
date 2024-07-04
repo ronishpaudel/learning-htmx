@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
+//get-route for user-data
 app.get("/get/user-data", function (req, res) {
   res.set("user-data", "text/html");
   res.send(
