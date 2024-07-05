@@ -27,19 +27,6 @@ app.get("/get/user-data", function (req, res) {
   );
 });
 
-//GetRoute for userData
-app.get("/users", (req, res) => {
-  setInterval(() => {
-    const users = [
-      { id: 1, name: "Ronish Paudel" },
-      { id: 2, name: "Ram Bahadur Thapa" },
-      { id: 3, name: "Percy Jackson" },
-    ];
-    return res.send(`<h1 class="text-2xl font-bold ">Users</h1>
-  <ul>${users.map((user) => `<li>Name : ${user.name}</li>`).join(" ")}</ul>`);
-  }, 1000);
-});
-
 app.post("/search", (req, res) => {
   const searchTerm = req.body.search.toLowerCase();
   if (!searchTerm) {
